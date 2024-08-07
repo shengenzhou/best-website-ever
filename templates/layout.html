@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <base href="/" />
+    <a href="/">
+        <img src="../static/fortnite.png" width="10%"/>
+    </a>
+    
+    <head>
+        <script type="text/javascript" src="https://livejs.com/live.js"></script>
+        <meta name="viewport" content"initial-scale=1, width="device-width">
+        <title>localhost</title>
+        <link rel="shortcut icon" href="#">
+    </head>
+    <style>
+        body {
+            background-color: rgb(22, 20, 46);
+        }
+        p {
+            color: black;
+            font-family: Arial;
+        }
+        
+        .big {
+            font-size: 50px;
+            font-family: Helvetica;
+            color:rgb(176, 201, 255);
+        }
+        .stupidText {
+            color:rgb(58, 58, 58);
+            font-size:25px;
+            font-weight:bold;
+            font-family:sans-serif;
+            position: absolute;
+            top: 5%;
+            left: 11%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .smaller {
+            top: 30%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            font-weight: normal;
+        }
+        button.template {
+            background-color:rgb(58, 58, 58);
+            color: rgb(98, 98, 165);
+            border: 2px solid rgb(98, 98, 165);
+            border-radius:12px;
+            font-size: 25px; 
+            width: 30%;
+            height: 15%;
+            cursor: pointer;
+            text-align:center; 
+        }
+        
+        button.tall {
+            width: 20%;
+            height: 30%;
+            position: absolute;
+            top: 10%;
+            left: 87%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        button.enter {
+            width: 10%;
+            height: 22%;
+            position: absolute;
+            top: 70%;
+            left: 76%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        button.placeholder {
+            width: 80%;
+            height: 100%;
+            border-color: rgb(58, 58, 58);
+            cursor: default;
+        }
+
+        button.button2 {
+            background-color:rgb(58, 58, 58);
+            color: rgb(98, 98, 165);
+            border: 2px solid rgb(98, 98, 165);
+            border-radius:4px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            display:inline-block;
+            font-size: 18px;
+            text-align:center; 
+            font-weight: bold;
+        }
+
+        button.wide1 {
+            width: 70px;
+            height: 50px;
+            font-size: 18px;
+            text-align:center; 
+            font-weight: bold;
+        }
+
+        button.wide2 {
+            width: 140px;
+            height: 50px;
+            font-size: 18px;
+            text-align:center; 
+            font-weight: bold;
+        }
+
+        button.wide3 {
+            font-size: 40px; 
+            width: 20%;
+            height: 15%;
+            position: absolute;
+            top: 90%;
+            left: 86%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .buttonBar {
+            background-color:rgb(58, 58, 58);
+            color: rgb(98, 98, 165);
+            border: 2px solid rgb(98, 98, 165);
+            border-radius:12px;
+            position: fixed;
+            display: flex;
+            width: 50%;
+            height: 10%;
+            top: 80%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            display:inline-block;
+            text-align:center; 
+        }
+
+        .two {
+            font-size: 25px; 
+            width: 70%;
+            height: 15%;
+            position: absolute;
+            top: 90%;
+            left: 39%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        .div {
+            background-color: rgb(176, 201, 255);
+            width: 60%;
+            height: 20%;
+            padding: 1%;
+            position: absolute;
+            top: 33%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            margin: auto;
+            border-radius: 12px;
+            font-family: Helvetica;
+        }
+        .three {
+            top: 20%;
+            left: 55%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+        
+        .div2 {
+            background-color: rgb(176, 201, 255);
+            width: 60%;
+            height: 25%;
+            padding: 1%;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            margin: auto;
+            border-radius: 12px;
+            font-family: Helvetica;
+        }
+
+        .div3 {
+            background-color: rgb(176, 201, 255);
+            width: 60%;
+            height: 50%;
+            padding: 1%;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            margin: auto;
+            border-radius: 12px;
+            font-size: 20px;
+            font-family: Helvetica;
+        }
+
+
+        .input {
+            width: 40%;
+            height: 20%;
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            border-radius: 12px;
+            text-align: center; 
+            font-family: Helvetica;
+            
+        
+        }
+
+        .inputBig {
+            padding: 14px 20px;
+            background-color: rgb(230, 238, 255);
+            border-color: rgb(98, 98, 165);
+            width: 50%;
+            border-radius: 12px;
+            font-family: Helvetica;
+            text-align: center;
+            font-size: 25px;
+        }
+        .inputBig2 {
+            padding: 14px 20px;
+            background-color: rgb(176, 201, 255);
+            border-color: rgb(98, 98, 165);
+            width: 10%;
+            border-radius: 12px;
+            font-family: Helvetica;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .inputBig3 {
+            padding: 14px 20px;
+            background-color: rgb(230, 238, 255);
+            border-color: rgb(98, 98, 165);
+            width: 25%;
+            border-radius: 12px;
+            font-family: Helvetica;
+            text-align: center;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .center {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .loading {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 25px; 
+        }
+
+        /* HTML: <div class="loader"></div> */
+        .loader {
+        width: 60px;
+        aspect-ratio: 2;
+        --_g: no-repeat radial-gradient(circle closest-side,rgb(176, 201, 255) 90%,#0000);
+        background: 
+            var(--_g) 0%   50%,
+            var(--_g) 50%  50%,
+            var(--_g) 100% 50%;
+        background-size: calc(100%/3) 50%;
+        animation: l3 1s infinite linear;
+        }
+        @keyframes l3 {
+            20%{background-position:0%   0%, 50%  50%,100%  50%}
+            40%{background-position:0% 100%, 50%   0%,100%  50%}
+            60%{background-position:0%  50%, 50% 100%,100%   0%}
+            80%{background-position:0%  50%, 50%  50%,100% 100%}
+        }
+
+        .table {
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            grid-auto-rows: minmax(100px, auto);
+        }
+        .one {
+            grid-column: 2;
+            grid-row: 4;
+        }
+        .two {
+            grid-column: 3;
+            grid-row: 4;
+        }
+    </style>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,132 @@
+{%extends "layout.html" %}
+
+{% block body %}
+    <div class="div3">
+        <p class="stupidText">resultaten</p>
+        <div id="pie" class="pie animate"> 0%</div>
+        
+        <div class="buttonBar two">
+            <button class="button2" id="previous" onclick="previousExcersise()">🡰</button>
+            <button class="template placeholder" id="buttonBar"></button>
+            <button class="button2" id="next" onclick="nextExcersise()">🡲</button>
+        </div>
+        <div class="div three" id="answerDiv">
+            <image id="feedback" src="static/greenbean.jpg" class="imageAnimation" width="500" height="200"></image>
+            <p id="questions"></p>
+            <p id="correctAnswer"></p>
+            <p id="userAnswer"></p>
+        </div>
+
+        <button class="template wide3" onclick="location.href='/'" type="button">🏠</button>
+    </div>
+
+    
+    
+    <script src="static/result.js" id="background"></script>
+
+    <style>
+        .pie {
+        --p:20;
+        --b:22px;
+        --c:rgb(98, 98, 165);
+        --w:150px;
+        
+        width:var(--w);
+        aspect-ratio:1;
+        position:relative;
+        display:inline-grid;
+        margin:5px;
+        place-content:center;
+        font-size:25px;
+        font-weight:bold;
+        font-family:sans-serif;
+        top: 30%;
+        left: 10%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        }@property --p{
+            syntax: '<number>';
+            inherits: true;
+            initial-value: 0;
+            }
+
+            .pie {
+            --p:20;
+            --b:22px;
+            --c:rgb(98, 98, 165);
+            --w:150px;
+            
+            width:var(--w);
+            aspect-ratio:1;
+            position:relative;
+            display:inline-grid;
+            margin:5px;
+            place-content:center;
+            font-size:25px;
+            font-weight:bold;
+            font-family:sans-serif;
+            }
+            .pie:before,
+            .pie:after {
+            content:"";
+            position:absolute;
+            border-radius:50%;
+            }
+            .pie:before {
+            inset:0;
+            background:
+                radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+                conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+            -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+                    mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            }
+            .pie:after {
+            inset:calc(50% - var(--b)/2);
+            background:var(--c);
+            transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+            }
+            .animate {
+            animation:p 1s .5s both;
+            }
+            .no-round:before {
+            background-size:0 0,auto;
+            }
+            .no-round:after {
+            content:none;
+            }
+            @keyframes p {
+            from{--p:0}
+            }
+
+        .pie:before,
+        .pie:after {
+        content:"";
+        position:absolute;
+        border-radius:50%;
+        }
+        .pie:before {
+        inset:0;
+        background:
+            radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+            conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+        -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+                mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+        }
+        .pie:after {
+        inset:calc(50% - var(--b)/2);
+        background:var(--c);
+        transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+        }
+        .animate {
+        animation:p 1s .5s both;
+    }
+
+    @keyframes pop-in {
+     0% { opacity: 0; transform: scale(0.1); }
+     100% { opacity: 1; transform: scale(1); }
+    }
+    .imageAnimation {
+        animation:pop-in 2s;
+    }
+    </style>
+{% endblock %}

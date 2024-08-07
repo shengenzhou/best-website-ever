@@ -1,0 +1,26 @@
+{%extends "layout.html" %}
+
+{% block body %}
+    <br>
+    <h class="big">Verhaaltjessommen oefenen</h>
+    <form class="center" action="/output" method="POST">
+        <h class="big">Maak voor mij verhaaltjessommen met...</h>
+        <input class="inputBig" id="input" name="theme" placeholder="thema, bijvoorbeeld fortnite" required>
+        <select data-placeholder="groep" class="inputBig3" name="grade" required>
+            <option>groep 6</option>
+            <option>groep 7</option>
+            <option>groep 8</option>
+        </select>
+        <button class="inputBig2" onclick="loadingScreen()" type="submit">↵</button>
+    </form>
+    <p class="loading" id="loadingAnimation"></p>
+
+    <script>
+        function loadingScreen() {
+            if (document.getElementById("input").value !== "") {
+                document.getElementById("loadingAnimation").classList.add("loader");
+            }
+        }
+    </script>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{%extends "layout.html" %}
+
+{% block body %}
+    <div class="div">
+        <p id="questions"></p>
+        <p id="answerBar"></p>
+        <button id="enterAnswer" class="template enter" onclick="toggleAnswer()">↵</button>        
+    </div>
+
+    <div class="buttonBar">
+        <button class="button2" id="previous" onclick="previousExcersise()">🡰</button>
+        <button class="template placeholder" id="buttonBar"></button>
+        <button class="button2" id="next" onclick="nextExcersise()">🡲</button>
+    </div>
+    
+    <div class="div2" id="answerDiv">
+        <p id="correctAnswer"></p>
+        <p id="userAnswer"></p>
+        <button class="template wide1" onclick="checkAnswer('correct')">✅</button>
+        <button class="template wide1" onclick="checkAnswer('incorrect')">❌</button>
+        <form id="result" action="/result" method="POST">
+            <button class="template wide2" onclick="saveResults()">bekijk resultaten</button>
+        </form>
+    </div>
+    <script type="text/javascript">var quiz = JSON.parse('{{ message_json | tojson | safe }}');</script>
+    <script type="text/javascript" src="static/quiz.js"></script>
+    
+{% endblock %}
